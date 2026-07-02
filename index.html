@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Progretto Premezclados — Concreto premezclado en San Luis Potosí</title>
+<meta name="description" content="Concreto premezclado de alta calidad en San Luis Potosí. Planta propia, flota de ollas revolvedoras, bombeo y control de calidad en cada m³. Cotiza tu concreto con Progretto Premezclados." />
+<meta property="og:title" content="Progretto Premezclados — Concreto que sostiene tu obra" />
+<meta property="og:description" content="Concreto premezclado de alta calidad en San Luis Potosí. Planta propia, entrega puntual y control de calidad certificado." />
+<meta property="og:type" content="website" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<style>
+  /* ═══════════════════════════════════════════════════════════
+     PROGRETTO PREMEZCLADOS · Landing
+     Marca: negro/slate premium + NARANJA de marca (#E8551F)
+     ═══════════════════════════════════════════════════════════ */
+  :root{
+    --black:#0A0A0A;
+    --charcoal:#14181B;
+    --charcoal-2:#1C2226;
+    --slate:#3D4A52;        /* slate del logo */
+    --slate-2:#556670;
+    --orange:#E8551F;       /* naranja del logo */
+    --orange-d:#C7451A;
+    --orange-soft:rgba(232,85,31,.12);
+    --cement:#8A8A8A;       /* texto secundario */
+    --cement-d:#6B6B6B;
+    --white:#FFFFFF;
+    --paper:#F4F3F1;
+    --line:rgba(255,255,255,.08);
+    --font-display:'Bebas Neue',Impact,sans-serif;
+    --font:'Inter',system-ui,-apple-system,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--black);color:var(--white);font-family:var(--font);
+    line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--orange);color:#fff}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;line-height:.95;letter-spacing:.01em}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 26px}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:9px;font-family:var(--font);
+    font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--orange);
+  }
+  .eyebrow::before{content:"";width:28px;height:2px;background:var(--orange);display:inline-block}
+  .sec-title{font-size:clamp(38px,6vw,74px);text-transform:uppercase;margin:16px 0 0}
+  .sec-title .o{color:var(--orange)}
+  .lead{color:var(--cement);font-size:16.5px;max-width:620px}
+
+  /* ── botones ── */
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;font-family:var(--font);font-weight:700;
+    font-size:14px;letter-spacing:.04em;text-transform:uppercase;padding:16px 30px;border-radius:2px;
+    border:2px solid transparent;cursor:pointer;transition:all .22s ease;white-space:nowrap;position:relative;overflow:hidden;
+  }
+  .btn svg{transition:transform .22s ease}
+  .btn-primary{background:var(--orange);color:#fff;border-color:var(--orange)}
+  .btn-primary:hover{background:var(--orange-d);border-color:var(--orange-d);transform:translateY(-2px);box-shadow:0 16px 32px -12px rgba(232,85,31,.6)}
+  .btn-primary:hover svg{transform:translateX(4px)}
+  .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+  .btn-ghost:hover{background:#fff;color:var(--black);border-color:#fff;transform:translateY(-2px)}
+
+  /* ═══ NAVBAR ═══ */
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .3s ease,box-shadow .3s ease,padding .3s ease;padding:20px 0}
+  nav.scrolled{background:rgba(10,10,10,.94);backdrop-filter:blur(10px);box-shadow:0 8px 30px rgba(0,0,0,.4);padding:12px 0}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .brand{display:flex;align-items:center;gap:12px;flex-shrink:0}
+  .brand .mark{width:40px;height:40px;flex-shrink:0}
+  .brand .txt{display:flex;flex-direction:column;line-height:1}
+  .brand .txt b{font-family:var(--font);font-weight:800;font-size:19px;letter-spacing:.02em;color:#fff}
+  .brand .txt span{font-size:9.5px;font-weight:700;letter-spacing:.32em;color:var(--orange);margin-top:3px}
+  .nav-links{display:flex;align-items:center;gap:34px}
+  .nav-links a{font-size:13.5px;font-weight:600;letter-spacing:.04em;color:rgba(255,255,255,.82);text-transform:uppercase;transition:color .18s;position:relative}
+  .nav-links a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--orange);transition:width .22s}
+  .nav-links a:hover{color:#fff}.nav-links a:hover::after{width:100%}
+  .nav-cta{display:inline-flex;align-items:center;gap:9px}
+  .nav-cta .wa-ic{flex-shrink:0}
+  .nav-actions{display:flex;align-items:center;gap:16px;flex-shrink:0}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px;z-index:120}
+  .burger span{width:26px;height:2.5px;background:#fff;border-radius:2px;transition:transform .3s,opacity .3s}
+  .burger.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+  .burger.open span:nth-child(2){opacity:0}
+  .burger.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+
+  /* ═══ HERO ═══ */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+  .hero-bg{position:absolute;inset:-8% 0 0 0;height:116%;z-index:0;will-change:transform}
+  .hero-bg img{width:100%;height:100%;object-fit:cover}
+  .hero-bg::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(10,10,10,.78) 0%,rgba(10,10,10,.55) 40%,rgba(10,10,10,.82) 100%),
+               linear-gradient(90deg,rgba(10,10,10,.85) 0%,rgba(10,10,10,.25) 70%);}
+  .hero-inner{position:relative;z-index:2;padding-top:120px;padding-bottom:60px;width:100%}
+  .hero h1{font-size:clamp(52px,9vw,124px);text-transform:uppercase;max-width:14ch;text-shadow:0 4px 40px rgba(0,0,0,.5)}
+  .hero h1 .o{color:var(--orange)}
+  .hero p.sub{margin:24px 0 34px;font-size:clamp(16px,1.8vw,20px);color:rgba(255,255,255,.85);max-width:560px;font-weight:400}
+  .hero .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+  .scroll-cue{position:absolute;bottom:200px;right:40px;writing-mode:vertical-rl;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.5);z-index:2}
+  /* contador */
+  .stats{position:relative;z-index:2;border-top:1px solid var(--line);margin-top:56px;padding-top:34px;
+    display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:820px}
+  .stat .num{font-family:var(--font-display);font-size:clamp(46px,6vw,74px);line-height:.9;color:#fff}
+  .stat .num .o{color:var(--orange)}
+  .stat .lbl{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--cement);margin-top:6px}
+
+  /* ═══ SECCIÓN base ═══ */
+  section{position:relative}
+  .band{padding:110px 0}
+  .band-dark{background:var(--black)}
+  .band-charcoal{background:linear-gradient(180deg,var(--charcoal) 0%,var(--black) 100%)}
+  .sec-head{max-width:760px;margin-bottom:56px}
+  .sec-head .lead{margin-top:20px}
+
+  /* ═══ SERVICIOS ═══ */
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line);border:1px solid var(--line)}
+  .svc{position:relative;background:var(--charcoal);padding:44px 34px;overflow:hidden;transition:background .3s ease;min-height:260px}
+  .svc .ic{width:52px;height:52px;color:var(--orange);margin-bottom:22px;transition:color .3s,transform .3s}
+  .svc h3{font-size:26px;text-transform:uppercase;color:#fff;transition:color .3s}
+  .svc p{color:var(--cement);font-size:14.5px;margin-top:12px;transition:color .3s}
+  .svc .more{max-height:0;overflow:hidden;transition:max-height .4s ease,margin .4s ease;color:rgba(255,255,255,.9);font-size:13.5px}
+  .svc .idx{position:absolute;top:20px;right:26px;font-family:var(--font-display);font-size:30px;color:rgba(255,255,255,.09);transition:color .3s}
+  .svc:hover{background:var(--orange)}
+  .svc:hover .ic{color:#fff;transform:translateY(-3px)}
+  .svc:hover h3,.svc:hover p{color:#fff}
+  .svc:hover .idx{color:rgba(255,255,255,.28)}
+  .svc:hover .more{max-height:120px;margin-top:14px}
+
+  /* ═══ POR QUÉ ═══ */
+  .why{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .why-media{position:relative}
+  .why-media img{width:100%;aspect-ratio:4/3.4;object-fit:cover;border-radius:2px}
+  .why-media .frame{position:absolute;inset:-14px -14px auto auto;width:66%;height:66%;border:2px solid var(--orange);z-index:-1}
+  .why-media .tag{position:absolute;left:0;bottom:0;background:var(--orange);color:#fff;padding:18px 24px;max-width:230px}
+  .why-media .tag b{font-family:var(--font-display);font-size:40px;display:block;line-height:.9}
+  .why-media .tag span{font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+  .why-copy .lead{margin:20px 0 26px}
+  .diffs{list-style:none;display:flex;flex-direction:column;gap:18px}
+  .diffs li{display:flex;gap:16px;align-items:flex-start}
+  .diffs .ck{flex-shrink:0;width:30px;height:30px;border-radius:50%;background:var(--orange-soft);display:flex;align-items:center;justify-content:center;color:var(--orange);margin-top:2px}
+  .diffs h4{font-family:var(--font);font-size:16px;font-weight:700;color:#fff;text-transform:none;letter-spacing:0}
+  .diffs p{font-size:14px;color:var(--cement);margin-top:2px}
+
+  /* ═══ GALERÍA / PLANTA ═══ */
+  .gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:12px}
+  .gal figure{position:relative;overflow:hidden;border-radius:2px;cursor:pointer}
+  .gal img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+  .gal figure::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(10,10,10,.85));opacity:.5;transition:opacity .3s}
+  .gal figcaption{position:absolute;left:18px;bottom:16px;z-index:2;opacity:0;transform:translateY(10px);transition:opacity .3s,transform .3s}
+  .gal figcaption b{font-family:var(--font-display);font-size:20px;letter-spacing:.03em;display:block;text-transform:uppercase}
+  .gal figcaption span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--orange)}
+  .gal figure:hover img{transform:scale(1.08)}
+  .gal figure:hover::after{opacity:.8}
+  .gal figure:hover figcaption{opacity:1;transform:translateY(0)}
+  .gal .big{grid-column:span 2;grid-row:span 2}
+  .gal .tall{grid-row:span 2}
+  .gal .wide{grid-column:span 2}
+
+  /* ═══ PROCESO ═══ */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;position:relative;margin-top:20px}
+  .steps::before{content:"";position:absolute;top:34px;left:12%;right:12%;height:2px;background:linear-gradient(90deg,var(--orange),rgba(232,85,31,.15))}
+  .step{position:relative;padding:0 20px;text-align:center}
+  .step .n{width:68px;height:68px;margin:0 auto 24px;border-radius:50%;background:var(--charcoal);border:2px solid var(--orange);
+    display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:30px;color:var(--orange);position:relative;z-index:2;transition:all .3s}
+  .step:hover .n{background:var(--orange);color:#fff;transform:scale(1.08)}
+  .step h4{font-family:var(--font);font-size:16px;font-weight:800;text-transform:uppercase;letter-spacing:.03em;color:#fff}
+  .step p{font-size:13.5px;color:var(--cement);margin-top:10px}
+
+  /* ═══ CTA band ═══ */
+  .cta-band{position:relative;padding:100px 0;overflow:hidden;background:var(--charcoal)}
+  .cta-band::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,var(--orange) 0%,var(--orange-d) 100%);opacity:1}
+  .cta-band .wrap{position:relative;z-index:2;text-align:center}
+  .cta-band h2{font-size:clamp(40px,6vw,78px);text-transform:uppercase;color:#fff}
+  .cta-band p{color:rgba(255,255,255,.92);font-size:18px;margin:18px auto 34px;max-width:560px}
+  .cta-band .btn-primary{background:#0A0A0A;border-color:#0A0A0A}
+  .cta-band .btn-primary:hover{background:#000;box-shadow:0 16px 32px -12px rgba(0,0,0,.5)}
+
+  /* ═══ CONTACTO ═══ */
+  .contact{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+  .contact-info h2{font-size:clamp(34px,5vw,58px);text-transform:uppercase}
+  .contact-info .lead{margin:18px 0 34px}
+  .ci-list{list-style:none;display:flex;flex-direction:column;gap:22px}
+  .ci-list li{display:flex;gap:16px;align-items:flex-start}
+  .ci-list .ic{flex-shrink:0;width:46px;height:46px;border-radius:2px;background:var(--charcoal-2);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--orange)}
+  .ci-list b{display:block;font-family:var(--font);font-weight:700;font-size:15px;color:#fff}
+  .ci-list span,.ci-list a{color:var(--cement);font-size:14.5px}
+  .ci-list a:hover{color:var(--orange)}
+  .form{background:var(--charcoal);border:1px solid var(--line);padding:38px;border-radius:2px}
+  .form .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .field{margin-bottom:16px}
+  .field label{display:block;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--cement);margin-bottom:8px}
+  .field input,.field select,.field textarea{width:100%;background:var(--black);border:1px solid var(--line);color:#fff;
+    font-family:var(--font);font-size:14.5px;padding:13px 15px;border-radius:2px;transition:border .2s}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--orange)}
+  .field textarea{resize:vertical;min-height:96px}
+  .form .btn-primary{width:100%;justify-content:center;margin-top:6px}
+  .form small{display:block;text-align:center;color:var(--cement-d);font-size:12px;margin-top:14px}
+
+  /* ═══ FOOTER ═══ */
+  footer{background:var(--black);border-top:1px solid var(--line);padding:60px 0 34px}
+  .foot-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;padding-bottom:44px;border-bottom:1px solid var(--line)}
+  .foot-brand .mark{width:50px;height:50px}
+  .foot-brand .txt b{font-size:22px}
+  .foot-brand .txt span{font-size:10.5px}
+  .foot-col h5{font-family:var(--font);font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#fff;margin-bottom:18px}
+  .foot-col a,.foot-col p{display:block;color:var(--cement);font-size:14px;margin-bottom:11px}
+  .foot-col a:hover{color:var(--orange)}
+  .foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:26px}
+  .foot-bottom p{color:var(--cement-d);font-size:12.5px}
+  .foot-bottom .mp{color:var(--cement-d);font-size:12.5px}
+
+  /* WhatsApp flotante */
+  .wa-float{position:fixed;right:22px;bottom:22px;z-index:90;width:58px;height:58px;border-radius:50%;background:#25D366;
+    display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.35);transition:transform .2s}
+  .wa-float:hover{transform:scale(1.08)}
+
+  /* ═══ animaciones reveal ═══ */
+  .reveal{opacity:0;transform:translateY(38px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}.reveal.d4{transition-delay:.32s}.reveal.d5{transition-delay:.4s}
+
+  /* ═══ RESPONSIVE ═══ */
+  @media(max-width:1024px){
+    .why{gap:40px}
+    .gal{grid-template-columns:repeat(3,1fr)}
+  }
+  @media(max-width:860px){
+    .nav-links{position:fixed;inset:0 0 0 auto;width:min(82vw,340px);background:var(--charcoal);
+      flex-direction:column;justify-content:center;align-items:flex-start;gap:26px;padding:90px 40px;
+      transform:translateX(100%);transition:transform .35s cubic-bezier(.4,0,.2,1);box-shadow:-20px 0 60px rgba(0,0,0,.5)}
+    .nav-links.open{transform:translateX(0)}
+    .nav-links a{font-size:18px}
+    .nav-cta{padding:13px 15px}
+    .nav-cta .cta-text{display:none}
+    .burger{display:flex}
+    .svc-grid{grid-template-columns:1fr 1fr}
+    .why{grid-template-columns:1fr}
+    .why-media{max-width:520px}
+    .contact{grid-template-columns:1fr;gap:44px}
+    .steps{grid-template-columns:1fr;gap:34px}
+    .steps::before{display:none}
+    .step{text-align:left;display:grid;grid-template-columns:68px 1fr;gap:20px;align-items:start}
+    .step .n{margin:0}
+    .scroll-cue{display:none}
+    .foot-top{grid-template-columns:1fr}
+  }
+  @media(max-width:560px){
+    .band{padding:74px 0}
+    .stats{grid-template-columns:1fr;gap:16px;max-width:none}
+    .stat{display:flex;align-items:baseline;gap:16px}
+    .stat .lbl{margin-top:0}
+    .svc-grid{grid-template-columns:1fr}
+    .gal{grid-template-columns:1fr 1fr;grid-auto-rows:150px}
+    .gal .big{grid-column:span 2;grid-row:span 2}
+    .form .row{grid-template-columns:1fr}
+    .hero .cta-row .btn{flex:1;justify-content:center}
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════ NAVBAR ═══════════ -->
+<nav id="nav">
+  <div class="wrap nav-inner">
+    <a href="#inicio" class="brand" aria-label="Progretto Premezclados">
+      <!-- Marca isométrica (aprox. del logo real: cubos slate + naranja) -->
+      <svg class="mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <!-- cubo naranja (frente) -->
+        <path d="M14 30l8-4.6 8 4.6-8 4.6z" fill="#E8551F"/>
+        <path d="M14 30v9l8 4.6v-9z" fill="#C7451A"/>
+        <path d="M30 30v9l-8 4.6v-9z" fill="#F06a34"/>
+        <!-- cubo slate (arriba izq) -->
+        <path d="M6 15l8-4.6 8 4.6-8 4.6z" fill="#556670"/>
+        <path d="M6 15v9l8 4.6v-9z" fill="#3D4A52"/>
+        <path d="M22 15v9l-8 4.6v-9z" fill="#48575F"/>
+        <!-- cubo slate (arriba der) -->
+        <path d="M26 12l8-4.6 8 4.6-8 4.6z" fill="#556670"/>
+        <path d="M26 12v9l8 4.6v-9z" fill="#3D4A52"/>
+        <path d="M42 12v9l-8 4.6v-9z" fill="#48575F"/>
+      </svg>
+      <span class="txt"><b>PROGRETTO</b><span>PREMEZCLADOS</span></span>
+    </a>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#servicios">Servicios</a>
+      <a href="#porque">Empresa</a>
+      <a href="#planta">Planta</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+
+    <div class="nav-actions">
+      <a class="btn btn-primary nav-cta" id="navCta" href="#" target="_blank" rel="noopener" aria-label="Cotiza tu concreto por WhatsApp">
+        <svg class="wa-ic" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1012 2zm0 18a8 8 0 01-4-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1112 20zm4.5-6c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.5.1l-.8 1c-.1.2-.3.2-.5.1a6.5 6.5 0 01-3.2-2.8c-.2-.4.2-.4.6-1.2l-.1-.5-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5a1 1 0 00-.7.3A2.8 2.8 0 007 8.9c0 1.7 1.2 3.3 1.4 3.5s2.4 3.7 5.8 5c2.1.8 2.6.6 3 .6s1.5-.6 1.7-1.2.2-1.1.2-1.2z"/></svg>
+        <span class="cta-text">Cotiza tu concreto</span>
+      </a>
+      <button class="burger" id="burger" aria-label="Menú"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════ HERO ═══════════ -->
+<header class="hero" id="inicio">
+  <div class="hero-bg" id="heroBg">
+    <img src="assets/fotos/foto-06.jpg" alt="Planta de concreto premezclado Progretto en San Luis Potosí" />
+  </div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow reveal">Concreto premezclado · San Luis Potosí</span>
+    <h1 class="reveal d1">Concreto que <span class="o">sostiene</span> tu obra</h1>
+    <p class="sub reveal d2">Producimos y entregamos concreto premezclado de alta calidad, con planta propia, flota de ollas revolvedoras y control de calidad en cada metro cúbico.</p>
+    <div class="cta-row reveal d3">
+      <a href="#planta" class="btn btn-primary">Ver la planta
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a href="#contacto" class="btn btn-ghost">Contáctanos</a>
+    </div>
+
+    <!-- CONTADOR (AJUSTAR números reales) -->
+    <div class="stats reveal d4">
+      <div class="stat"><div class="num" data-count="6" data-suffix="">0</div><div class="lbl">Ollas revolvedoras en flota</div></div>
+      <div class="stat"><div class="num" data-count="500" data-suffix="+">0</div><div class="lbl">m³ de capacidad diaria</div></div>
+      <div class="stat"><div class="num" data-count="100" data-suffix="%">0</div><div class="lbl">Control de calidad</div></div>
+    </div>
+  </div>
+  <div class="scroll-cue">Scroll</div>
+</header>
+
+<!-- ═══════════ SERVICIOS ═══════════ -->
+<section class="band band-dark" id="servicios">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Lo que producimos</span>
+      <h2 class="sec-title">Concreto a la <span class="o">medida</span> de tu proyecto</h2>
+      <p class="lead">Diseñamos, producimos y suministramos concreto para cada etapa de tu obra — de la cimentación al pavimento — con la resistencia y el revenimiento que tu proyecto exige.</p>
+    </div>
+
+    <div class="svc-grid reveal d1">
+      <div class="svc">
+        <span class="idx">01</span>
+        <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 20l16-9 16 9-16 9z"/><path d="M8 20v10l16 9 16-9V20"/><path d="M24 29v10"/></svg>
+        <h3>Concreto premezclado</h3>
+        <p>Distintas resistencias f'c según diseño estructural.</p>
+        <div class="more">Concreto dosificado con precisión en planta: f'c 100, 150, 200, 250, 300 kg/cm² y especiales bajo diseño de mezcla.</div>
+      </div>
+      <div class="svc">
+        <span class="idx">02</span>
+        <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 34h20l6-10h10"/><circle cx="12" cy="38" r="4"/><circle cx="30" cy="38" r="4"/><path d="M32 24V14h6l4 10"/></svg>
+        <h3>Bombeo de concreto</h3>
+        <p>Colados en altura y zonas de difícil acceso.</p>
+        <div class="more">Servicio de bombeo para losas, columnas y colados donde la olla no llega. Entrega continua y sin desperdicio.</div>
+      </div>
+      <div class="svc">
+        <span class="idx">03</span>
+        <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="27" width="34" height="8" rx="1"/><path d="M11 27V17h26v10"/><path d="M18 17v-6h12v6"/></svg>
+        <h3>Losas y firmes</h3>
+        <p>Pisos industriales, firmes y plataformas.</p>
+        <div class="more">Concreto para losas de entrepiso, firmes, patios de maniobra y pisos industriales con acabado uniforme.</div>
+      </div>
+      <div class="svc">
+        <span class="idx">04</span>
+        <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 40V12l14-4 14 4v28"/><path d="M10 22h28M10 31h28M18 40V8m12 32V8"/></svg>
+        <h3>Concreto estructural</h3>
+        <p>Cimentaciones, columnas, trabes y muros.</p>
+        <div class="more">Mezclas de alto desempeño para elementos estructurales, con trazabilidad y respaldo de laboratorio.</div>
+      </div>
+      <div class="svc">
+        <span class="idx">05</span>
+        <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 34h38"/><path d="M9 34l3-9h24l3 9"/><path d="M16 25l1-5h14l1 5"/></svg>
+        <h3>Pavimentos</h3>
+        <p>Concreto hidráulico para vialidades.</p>
+        <div class="more">Concreto para pavimentos, banquetas, guarniciones y vialidades con la durabilidad que exige el tránsito pesado.</div>
+      </div>
+      <div class="svc">
+        <span class="idx">06</span>
+        <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6h12v10l8 22a3 3 0 01-3 4H13a3 3 0 01-3-4l8-22z"/><path d="M16 26h16"/><path d="M18 6h12"/></svg>
+        <h3>Control de calidad</h3>
+        <p>Pruebas de resistencia y revenimiento.</p>
+        <div class="more">Muestreo, cilindros de prueba y ensayos de resistencia a compresión y revenimiento en cada suministro.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ POR QUÉ ═══════════ -->
+<section class="band band-charcoal" id="porque">
+  <div class="wrap">
+    <div class="why">
+      <div class="why-media reveal">
+        <span class="frame"></span>
+        <img src="assets/fotos/foto-20.jpg" alt="Olla revolvedora de Progretto Premezclados" />
+        <div class="tag"><b>Flota propia</b><span>Ollas y bombeo Progretto</span></div>
+      </div>
+      <div class="why-copy">
+        <span class="eyebrow reveal">Nuestra empresa · San Luis Potosí</span>
+        <h2 class="sec-title reveal d1" style="font-size:clamp(34px,5vw,58px)">Nuestra <span class="o">historia</span></h2>
+        <p class="lead reveal d2" style="color:#fff;font-weight:600;font-size:18px">Grupo Progretto nació en San Luis Potosí con una sola misión: que tu obra no se detenga.</p>
+        <p class="lead reveal d2">Sabemos que un retraso en el concreto no es solo un inconveniente — es dinero, es cuadrilla parada, es cliente insatisfecho. Por eso construimos una operación de flota propia, planta de premezclado y equipo de bombeo diseñada para una sola cosa: llegar cuando lo necesitas, con la resistencia que especificaste.</p>
+        <p class="lead reveal d3">Más de <b style="color:#fff">50 contratistas y constructoras</b> activos en SLP ya confían en nosotros. No por precio — sino porque cuando llamas a Progretto, el camión llega.</p>
+        <p class="reveal d3" style="font-family:var(--font-display);font-size:clamp(24px,3vw,32px);color:var(--orange);margin:2px 0 28px;letter-spacing:.02em;line-height:1">Carga tras carga. Obra tras obra.</p>
+        <ul class="diffs">
+          <li class="reveal d2"><span class="ck"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>Planta propia de premezclado</h4><p>Dosificación controlada con cemento CEMEX y equipo FRUMECAR — consistencia carga tras carga.</p></div></li>
+          <li class="reveal d3"><span class="ck"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>Entrega puntual</h4><p>Programamos tus colados y cumplimos horarios: el concreto llega cuando tu cuadrilla lo necesita.</p></div></li>
+          <li class="reveal d4"><span class="ck"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>Control de calidad en cada m³</h4><p>Ensayos de resistencia y revenimiento que respaldan el desempeño de tu estructura.</p></div></li>
+          <li class="reveal d5"><span class="ck"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span><div><h4>Atención directa</h4><p>Trato cercano con contratistas y constructoras: cotización ágil y seguimiento personalizado.</p></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PLANTA / GALERÍA ═══════════ -->
+<section class="band band-dark" id="planta">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Nuestra planta</span>
+      <h2 class="sec-title">Capacidad <span class="o">real</span>, no promesas</h2>
+      <p class="lead">Silos de cemento, dosificadora, cargadores y flota de ollas: infraestructura propia lista para responder al ritmo de tu obra en San Luis Potosí y la región.</p>
+    </div>
+
+    <div class="gal reveal d1">
+      <figure class="big"><img src="assets/fotos/foto-08.jpg" alt="Planta de premezclado Progretto"><figcaption><span>Planta</span><b>Producción propia</b></figcaption></figure>
+      <figure><img src="assets/fotos/foto-01.jpg" alt="Dosificadora FRUMECAR y cargador"><figcaption><span>Equipo</span><b>Dosificación</b></figcaption></figure>
+      <figure class="tall"><img src="assets/fotos/foto-21.jpg" alt="Olla revolvedora Progretto #006"><figcaption><span>Flota</span><b>Ollas Progretto</b></figcaption></figure>
+      <figure><img src="assets/fotos/foto-10.jpg" alt="Silo CEMEX y planta"><figcaption><span>Almacenaje</span><b>Silo CEMEX</b></figcaption></figure>
+      <figure class="wide"><img src="assets/fotos/foto-03.jpg" alt="Vista aérea de la planta"><figcaption><span>Instalación</span><b>Vista aérea</b></figcaption></figure>
+      <figure class="tall"><img src="assets/fotos/foto-23.jpg" alt="Prueba de calidad del concreto"><figcaption><span>Laboratorio</span><b>Control de calidad</b></figcaption></figure>
+      <figure><img src="assets/fotos/foto-20.jpg" alt="Olla Progretto en planta"><figcaption><span>Suministro</span><b>Reparto</b></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PROCESO ═══════════ -->
+<section class="band band-charcoal" id="proceso">
+  <div class="wrap">
+    <div class="sec-head reveal" style="text-align:center;margin-left:auto;margin-right:auto">
+      <span class="eyebrow">Cómo trabajamos</span>
+      <h2 class="sec-title">Del <span class="o">pedido</span> al colado</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal d1"><div class="n">01</div><h4>Cotización</h4><p>Nos dices resistencia, volumen y fecha. Te enviamos precio y programación al momento.</p></div>
+      <div class="step reveal d2"><div class="n">02</div><h4>Diseño de mezcla</h4><p>Definimos la dosificación f'c y el revenimiento óptimo para tu elemento.</p></div>
+      <div class="step reveal d3"><div class="n">03</div><h4>Producción</h4><p>Fabricamos en planta con dosificación controlada y verificación de calidad.</p></div>
+      <div class="step reveal d4"><div class="n">04</div><h4>Entrega y bombeo</h4><p>Nuestra flota suministra en obra, con bombeo cuando el colado lo requiere.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CTA BAND ═══════════ -->
+<section class="cta-band">
+  <div class="wrap reveal">
+    <h2>¿Listo para tu próximo colado?</h2>
+    <p>Cotiza tu concreto premezclado hoy y asegura tu programación de entrega.</p>
+    <a href="#contacto" class="btn btn-primary">Solicitar cotización
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ═══════════ CONTACTO ═══════════ -->
+<section class="band band-dark" id="contacto">
+  <div class="wrap">
+    <div class="contact">
+      <div class="contact-info">
+        <span class="eyebrow reveal">Contacto</span>
+        <h2 class="reveal d1">Hablemos de tu <span class="o" style="color:var(--orange)">obra</span></h2>
+        <p class="lead reveal d2">Atendemos a contratistas, constructoras y particulares en San Luis Potosí y la región. Cuéntanos tu proyecto y te cotizamos.</p>
+        <ul class="ci-list">
+          <li class="reveal d2"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.6A2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.4-1.3a2 2 0 012.1-.5c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg></span><div><b>Teléfono / WhatsApp</b><a href="tel:+524441244037">+52 444 124 4037</a></div></li>
+          <li class="reveal d3"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg></span><div><b>Correo</b><a href="mailto:ventas@progretto.mx">ventas@progretto.mx</a></div></li>
+          <li class="reveal d4"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><b>Ubicación</b><span>Av. Microindustrias–Joyas de San Elías 8802, Col. Emiliano Zapata, Arroyos, S.L.P. · C.P. 78426</span></div></li>
+        </ul>
+      </div>
+
+      <form class="form reveal d2" id="waForm" onsubmit="return enviarWA(event)">
+        <div class="row">
+          <div class="field"><label>Nombre</label><input type="text" id="f-nombre" required placeholder="Tu nombre" /></div>
+          <div class="field"><label>Teléfono</label><input type="tel" id="f-tel" required placeholder="Tu teléfono" /></div>
+        </div>
+        <div class="row">
+          <div class="field"><label>Tipo de concreto</label>
+            <select id="f-tipo">
+              <option>Concreto premezclado</option>
+              <option>Bombeo de concreto</option>
+              <option>Losas y firmes</option>
+              <option>Concreto estructural</option>
+              <option>Pavimentos</option>
+              <option>Otro / no estoy seguro</option>
+            </select>
+          </div>
+          <div class="field"><label>Volumen aprox. (m³)</label><input type="text" id="f-vol" placeholder="Ej. 12 m³" /></div>
+        </div>
+        <div class="field"><label>Mensaje</label><textarea id="f-msg" placeholder="Cuéntanos sobre tu obra, fecha del colado y ubicación..."></textarea></div>
+        <button type="submit" class="btn btn-primary">Enviar por WhatsApp
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1012 2zm0 18a8 8 0 01-4-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1112 20zm4.5-6c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.5.1l-.8 1c-.1.2-.3.2-.5.1a6.5 6.5 0 01-3.2-2.8c-.2-.4.2-.4.6-1.2l-.1-.5-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5a1 1 0 00-.7.3A2.8 2.8 0 007 8.9c0 1.7 1.2 3.3 1.4 3.5s2.4 3.7 5.8 5c2.1.8 2.6.6 3 .6s1.5-.6 1.7-1.2.2-1.1.2-1.2z"/></svg>
+        </button>
+        <small>Se abrirá WhatsApp con tu mensaje prellenado.</small>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-col">
+        <a href="#inicio" class="brand foot-brand" aria-label="Progretto Premezclados">
+          <svg class="mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <path d="M14 30l8-4.6 8 4.6-8 4.6z" fill="#E8551F"/>
+            <path d="M14 30v9l8 4.6v-9z" fill="#C7451A"/>
+            <path d="M30 30v9l-8 4.6v-9z" fill="#F06a34"/>
+            <path d="M6 15l8-4.6 8 4.6-8 4.6z" fill="#556670"/>
+            <path d="M6 15v9l8 4.6v-9z" fill="#3D4A52"/>
+            <path d="M22 15v9l-8 4.6v-9z" fill="#48575F"/>
+            <path d="M26 12l8-4.6 8 4.6-8 4.6z" fill="#556670"/>
+            <path d="M26 12v9l8 4.6v-9z" fill="#3D4A52"/>
+            <path d="M42 12v9l-8 4.6v-9z" fill="#48575F"/>
+          </svg>
+          <span class="txt"><b>PROGRETTO</b><span>PREMEZCLADOS</span></span>
+        </a>
+        <p style="margin-top:22px;max-width:360px">Concreto premezclado de alta calidad en San Luis Potosí. Planta propia, flota de ollas revolvedoras, bombeo y control de calidad en cada metro cúbico.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Navegación</h5>
+        <a href="#servicios">Servicios</a>
+        <a href="#porque">Empresa</a>
+        <a href="#planta">Nuestra planta</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <div class="foot-col">
+        <h5>Contacto</h5>
+        <a href="https://wa.me/5214441244037" target="_blank" rel="noopener">WhatsApp · +52 444 124 4037</a>
+        <a href="tel:+524441244037">Tel · +52 444 124 4037</a>
+        <a href="mailto:ventas@progretto.mx">ventas@progretto.mx</a>
+        <p style="margin-top:4px;line-height:1.5">Av. Microindustrias–Joyas de San Elías 8802,<br>Col. Emiliano Zapata, Arroyos,<br>San Luis Potosí, S.L.P. · C.P. 78426</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>© <span id="year"></span> Progretto Premezclados. Todos los derechos reservados.</p>
+      <p class="mp">Concreto premezclado · SLP</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp flotante -->
+<a class="wa-float" id="waFloat" href="#" aria-label="WhatsApp" target="_blank" rel="noopener">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1012 2zm4.5 12c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.5.1l-.8 1c-.1.2-.3.2-.5.1a6.5 6.5 0 01-3.2-2.8c-.2-.4.2-.4.6-1.2l-.1-.5-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5a1 1 0 00-.7.3A2.8 2.8 0 007 8.9c0 1.7 1.2 3.3 1.4 3.5s2.4 3.7 5.8 5c2.1.8 2.6.6 3 .6s1.5-.6 1.7-1.2.2-1.1.2-1.2z"/></svg>
+</a>
+
+<script>
+  /* ════ CONFIG (AJUSTAR con datos reales) ════ */
+  const WHATSAPP = '5214441244037'; // +52 444 124 4037
+  const waCotiza = 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent('Hola Progretto, me interesa cotizar concreto premezclado.');
+  document.getElementById('navCta').href = waCotiza;
+  document.getElementById('waFloat').href = waCotiza;
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  /* ════ NAVBAR scroll ════ */
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+  /* ════ MENÚ móvil ════ */
+  const burger = document.getElementById('burger');
+  const navLinks = document.getElementById('navLinks');
+  burger.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    burger.classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open'); burger.classList.remove('open'); document.body.style.overflow = '';
+  }));
+
+  /* ════ PARALLAX hero (sutil) ════ */
+  const heroBg = document.getElementById('heroBg');
+  const isDesktop = window.matchMedia('(min-width:861px)').matches;
+  if (isDesktop) {
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      if (y < window.innerHeight) heroBg.style.transform = 'translateY(' + (y * 0.28) + 'px)';
+    }, {passive:true});
+  }
+
+  /* ════ REVEAL on scroll ════ */
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:0.14, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  /* ════ CONTADORES animados ════ */
+  const countIO = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const el = e.target, target = +el.dataset.count, suffix = el.dataset.suffix || '';
+      const dur = 1600, t0 = performance.now();
+      const tick = (t) => {
+        const p = Math.min((t - t0) / dur, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(target * eased) + suffix;
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+      countIO.unobserve(el);
+    });
+  }, {threshold:0.5});
+  document.querySelectorAll('.num[data-count]').forEach(el => countIO.observe(el));
+
+  /* ════ FORM → WhatsApp ════ */
+  function enviarWA(ev){
+    ev.preventDefault();
+    const g = id => (document.getElementById(id).value || '').trim();
+    const msg =
+      '*Nueva cotización — Progretto Premezclados*%0A%0A' +
+      '*Nombre:* ' + g('f-nombre') + '%0A' +
+      '*Teléfono:* ' + g('f-tel') + '%0A' +
+      '*Tipo:* ' + g('f-tipo') + '%0A' +
+      '*Volumen:* ' + (g('f-vol') || 'No especificado') + '%0A' +
+      '*Mensaje:* ' + (g('f-msg') || '—');
+    window.open('https://wa.me/' + WHATSAPP + '?text=' + msg, '_blank');
+    return false;
+  }
+</script>
+</body>
+</html>
